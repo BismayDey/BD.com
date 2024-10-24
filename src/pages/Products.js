@@ -44,6 +44,20 @@ const Product = () => {
             Learn More
           </button>
         </div>
+        <div className="product-item">
+          <h3>Mortgage</h3>
+          <p>Expert guidance and support for all your real estate needs.</p>
+          <button onClick={() => handleLearnMore("real-estate-services")}>
+            Learn More
+          </button>
+        </div>
+        <div className="product-item">
+          <h3>Loan</h3>
+          <p>Expert guidance and support for all your real estate needs.</p>
+          <button onClick={() => handleLearnMore("real-estate-services")}>
+            Learn More
+          </button>
+        </div>
       </div>
     </div>
   );

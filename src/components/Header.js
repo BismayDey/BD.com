@@ -7,12 +7,18 @@ const Header = () => {
     <header className="header">
       <nav>
         <ul>
-          <li className="logo">BD.com</li>
-          <li>
-            <Link to="/">Home</Link>
+          <li className="logo">
+            <>BD.com</>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/">
+              <>Home</>
+            </Link>
+          </li>
+          <li>
+            <Link to="/about">
+              <>About</>
+            </Link>
           </li>
           <li>
             <Link to="/products">Products</Link>
