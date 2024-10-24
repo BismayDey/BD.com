@@ -27,7 +27,7 @@ const About = () => {
             src="https://images.ottplay.com/images/shah-rukh-khan-hospitalized-1716384390.jpg?impolicy=ottplay-20210210&width=1200&height=675"
             alt="Team Member 1"
           />
-          <h3>Jane Doe</h3>
+          <h3>Sharukh Khan</h3>
           <p>CEO & Founder</p>
           <p>
             Jane has over 15 years of experience in the mortgage industry,
@@ -67,14 +67,14 @@ const About = () => {
             "Better made the home buying process so easy and stress-free! Highly
             recommend their services."
           </p>
-          <h4>- Sarah Lee</h4>
+          <h4>- Bismay Dey</h4>
         </div>
         <div className="testimonial">
           <p>
             "The team at Better was incredibly helpful and guided me through
             every step of my mortgage refinancing."
           </p>
-          <h4>- Michael Brown</h4>
+          <h4>- ALLAH</h4>
         </div>
       </div>
     </div>
