@@ -1,0 +1,123 @@
+.rates-container {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.rates-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.rate-table {
+  margin-bottom: 40px;
+}
+
+.rate-table h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0071e3;
+}
+
+.rate-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.rate-table th,
+.rate-table td {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.rate-table th {
+  background-color: #0071e3;
+  color: white;
+}
+
+.calculator {
+  margin-top: 20px;
+}
+
+.calculator input,
+.calculator select {
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.calculator button {
+  padding: 10px 20px;
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calculator button:hover {
+  background-color: #005bb5;
+}
+
+.payment-result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0071e3;
+}
+
+.amortization-schedule {
+  margin-top: 40px;
+}
+
+.amortization-schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.amortization-schedule th,
+.amortization-schedule td {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.faq-section {
+  margin-top: 40px;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  color: #0071e3;
+}
+
+.faq-item {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.faq-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .rates-container {
+    padding: 40px 10px;
+  }
+  .rates-container h1 {
+    font-size: 2rem;
+  }
+}

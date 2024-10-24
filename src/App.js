@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import Services from "./components/Services";
+import Footer from "./components/Footer";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import Rates from "./pages/Rates";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login"; // Import Login
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HeroSection />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/rates" element={<Rates />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} /> {/* Add login route */}
+      </Routes>
+      <Services />
+      <Footer />
     </div>
   );
 }
