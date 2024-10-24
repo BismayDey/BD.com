@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Chart from "chart.js/auto"; // Assuming you are using Chart.js
+import { Line } from "react-chartjs-2";
 import "./Rates.css";
 
 const Rates = () => {
@@ -9,6 +11,8 @@ const Rates = () => {
   const [monthlyPayment, setMonthlyPayment] = useState(null);
   const [showSchedule, setShowSchedule] = useState(false);
   const [amortizationSchedule, setAmortizationSchedule] = useState([]);
+  const [chartData, setChartData] = useState({}); // For mortgage rate trends
+  const [isRateAlertEnabled, setIsRateAlertEnabled] = useState(false);
 
   const calculatePayment = () => {
     const principal = parseFloat(amount) - parseFloat(downPayment);
@@ -53,6 +57,26 @@ const Rates = () => {
     }
     setAmortizationSchedule(schedule);
     setShowSchedule(true);
+  };
+
+  const fetchChartData = () => {
+    // Dummy data for illustration; replace with actual API call
+    const data = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      datasets: [
+        {
+          label: "Mortgage Rates",
+          data: [3.5, 3.6, 3.4, 3.7, 3.8, 3.9],
+          borderColor: "#0071e3",
+          backgroundColor: "rgba(0, 113, 227, 0.2)",
+        },
+      ],
+    };
+    setChartData(data);
+  };
+
+  const toggleRateAlerts = () => {
+    setIsRateAlertEnabled(!isRateAlertEnabled);
   };
 
   return (
@@ -149,6 +173,26 @@ const Rates = () => {
           </table>
         </div>
       )}
+
+      <div className="rate-alerts">
+        <h2>Rate Alerts</h2>
+        <label>
+          <input
+            type="checkbox"
+            checked={isRateAlertEnabled}
+            onChange={toggleRateAlerts}
+          />
+          Enable rate alerts
+        </label>
+      </div>
+
+      <div className="trend-chart">
+        <h2>Mortgage Rate Trends</h2>
+        <button onClick={fetchChartData}>Load Trends</button>
+        {chartData.labels && (
+          <Line data={chartData} options={{ responsive: true }} />
+        )}
+      </div>
 
       <div className="faq-section">
         <h2>Frequently Asked Questions</h2>
